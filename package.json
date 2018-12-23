@@ -1,0 +1,47 @@
+{
+  "name": "civ6-drafter",
+  "version": "1.0.0",
+  "description": "hi",
+  "author": "Will Godfrey <w.gowman.godfrey@gmail.com>",
+  "private": false,
+  "scripts": {
+    "start:prd": "node server/index.js",
+    "start:dev": "nodemon server/index.js",
+    "build:prd": "webpack -p",
+    "build:dev": "webpack -d --watch",
+    "lint": "eslint --ignore-path .gitignore client/components/** --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wggodfrey/civ6-drafter"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.4",
+    "morgan": "^1.9.1",
+    "pg": "^7.6.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-redux": "^5.1.1",
+    "react-select": "^2.1.2",
+    "redux": "^4.0.1",
+    "redux-debounced": "^0.5.0",
+    "redux-promise-middleware": "^5.1.1",
+    "redux-thunk": "^2.3.0",
+    "thunk": "0.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-react": "^1.0.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.18.6",
+    "styled-components": "^4.1.3",
+    "webpack": "^4.25.1",
+    "webpack-cli": "^3.1.2"
+  }
+}
