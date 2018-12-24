@@ -1,9 +1,9 @@
 import { combineReducers } from 'redux';
 
-import settingsReducer from './settings.js';
+import civsReducer from './civs.js';
 
 const rootReducer = combineReducers({
-  settings: settingsReducer,
+  civs: civsReducer,
 });
 
 export default rootReducer;

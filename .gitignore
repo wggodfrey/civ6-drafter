@@ -3,3 +3,6 @@ coverage
 
 #dependency directories
 node_modules/
+
+#artifacts
+public/bundle.js
