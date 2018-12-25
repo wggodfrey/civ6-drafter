@@ -1,26 +1,27 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Wrapper = styled.div`
-  width: 100%;
-  padding: 0;
-  background: #525252;
-  height: 53px;
-`;
+const Banner = () => {
 
-const Title = styled.div`
-  width: calc(100% - 80px);
-  padding: 15px 0px 15px 40px;
-  float: left;
-  color: #fff;
-  font-family: 'Roboto Condensed';
-  font-size: 20px;
-`;
+  const Wrapper = styled.div`
+    width: 100%;
+    min-width: 725px;
+    padding: 10px 0px;
+    background: #525252;
+  `;
 
-const Banner = () => (
-  <Wrapper>
-    <Title>minesweeper_redux</Title>
-  </Wrapper>
-);
+  const Title = styled.div`
+    color: #ffffff;
+    font-family: 'Roboto Condensed';
+    font-size: 20px;
+    text-align: center;
+  `;
+
+  return (
+    <Wrapper>
+      <Title>civ6 drafter</Title>
+    </Wrapper>
+  )
+};
 
 export default Banner;
