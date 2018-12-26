@@ -1,0 +1,6 @@
+id,leader_id,name,desc
+0,0,P-51 Mustang,"American unique Atomic era air unit that replaces the Fighter. Gains +5 attack against fighter aircraft, has +2 flight range, and gains +50% experience."
+1,0,Rough Rider,American unique Industrial era unit when Teddy Roosevelt is their leader. <culture/> Culture is earned from kills on their <capital/> Capital's continent. +5 <combat/> Combat Strength when fighting on hills. Lower maintenance cost.
+2,0,Film Studio,A building unique to America. +100% <tourism/> Tourism pressure from this city toward other cities in the Modern era.
+3,1,Mamluk,"Arabian unique Medieval era unit that replaces the Knight. Heals at the end of every turn, even after moving or attacking."
+4,1,Madrasa,A building unique to Arabia. Bonus <faith/> Faith equal to the adjacency bonus of the Campus district.

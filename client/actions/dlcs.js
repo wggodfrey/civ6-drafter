@@ -11,6 +11,7 @@ const toggDlc = dlc => ({
 const getDlcs = () => {
   return dispatch => {
     const dlcs = [
+      {name: 'Base', active: true},
       {name: 'Poland', active: true},
       {name: 'Australia', active: true},
       {name: 'Persia and Macedon', active: true},

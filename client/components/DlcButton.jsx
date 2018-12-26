@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const DlcButton = ({ name, active, count, index, handleClick }) => {
+const DlcButton = ({ name, active, index, handleClick }) => {
 
   const Button = styled.button`
     margin: 0px 5px;
     padding: 10px 5px;
+    flex-grow: 1;
     border-radius: 5px;
     background: ${active? '#ffffff':'#d3d3d3'};
     color: ${active? '#525252':'#a9a9a9'};
@@ -20,7 +21,7 @@ const DlcButton = ({ name, active, count, index, handleClick }) => {
   `;
 
   return (
-    <Button onClick={() => handleClick(index)}>
+    <Button onClick={() => handleClick(index + 1)}>
       {name}
     </Button>
   )

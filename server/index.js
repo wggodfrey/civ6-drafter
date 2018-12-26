@@ -7,8 +7,8 @@ app.use(express.static(path.join(__dirname,'./../public')));
 app.use(express.static(path.join(__dirname,'./../node_modules')));
 app.use(morgan('combined'));
 
-// const router = require('./routes');
-// app.use('/', router);
+const router = require('./routes');
+app.use('/', router);
 
 const port = 1503;
 app.listen(port, () => {
