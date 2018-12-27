@@ -17,7 +17,7 @@ const getDlcs = () => {
       {name: 'Persia and Macedon', active: true},
       {name: 'Nubia', active: true},
       {name: 'Khmer and Indonesia', active: true},
-      {name: 'Rise and Fall', active: false},
+      {name: 'Rise and Fall', active: true},
     ];
     dispatch(initDlcs(dlcs));
   }

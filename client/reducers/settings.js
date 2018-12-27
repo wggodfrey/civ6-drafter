@@ -1,12 +1,11 @@
 const settingsReducer = (state = {}, action) => {
-  console.log(action.type);
+  
   switch (action.type) {
 
     case 'INIT_SETTINGS':
       return action.payload;
 
     case 'TOGG_MENU1':
-      console.log('hiiii');
       return {...state, menu1open: !state.menu1open};
 
     case 'TOGG_MENU2':

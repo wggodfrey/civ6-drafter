@@ -38,13 +38,28 @@ const OtherItem = styled.li`
   border-top: solid 1px #efefef;
   position: relative;
   top: -3px;
+  z-index: 2;
   &:hover {
     background: steelblue;
     color: #ffffff;
   }
 `;
 
-const DropDown = ({label, options, active, open, toggle, handleClick}) => (
+const Carat = styled.span`
+  width: 0; 
+  height: 0; 
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #525252;
+  pointer-events: none;
+  float: right;
+  position: relative;
+  top: -16px;
+  right: 10px;
+  z-index: 1;
+`;
+
+const DropDown = ({label, options, active, open, toggle, handleSelect}) => (
   <Wrapper>
     <Label>{`${label}:`}</Label>
     <List onClick={toggle}>
@@ -56,11 +71,12 @@ const DropDown = ({label, options, active, open, toggle, handleClick}) => (
         ? options.map((opt, i) => 
             <OtherItem 
               key={`li0_${i}`}
-              data-value={opt}>
+              value={opt}
+              onClick={handleSelect}>
             {opt}
             </OtherItem>
           )
-        : <div />
+        : <Carat/>
       }
     </List>
   </Wrapper>

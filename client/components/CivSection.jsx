@@ -22,7 +22,7 @@ const Title = styled.div`
 `;
 
 const Options = styled.div`
-  margin: 0px 5px;
+  margin: 10px 5px 0px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -30,7 +30,7 @@ const Options = styled.div`
 
 const CivSection = ({ dlcs, civs }) => (
   <Wrapper>
-    <Title>Available Civs</Title>
+    <Title>Available Civilizations</Title>
     <Options>
     {
       dlcs.length > 0 && civs.length > 0
