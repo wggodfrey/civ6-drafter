@@ -8,44 +8,51 @@ const Button = styled.button`
 `;
 
 const Label = styled.div`
+  margin: 4px 0px 0px 0px;
   color: #525252;
   font-family: 'Roboto Condensed';
   font-size: 12px;
 `;
 
-const CivButton = ({ leader, nation, active, index, handleClick }) => {
+const Holder = styled.div`
+  width: 50px;
+  height: 50px;
+  margin: 0px 10px;
+  padding: 1px;
+  border-radius: 30px;
+  transition: background 250ms, color 250ms;
+`;
 
-  const Holder = styled.div`
-    width: 50px;
-    height: 50px;
-    margin: 0px 10px;
-    padding: 5px;
-    border-radius: 30px;
-    background: ${active? 'transparent':'red'};
-    transition: background 250ms, color 250ms;
-    &:hover {
-      background: ${active? '#d3d3d3':'red'};
-    }
-  `;
+const Image = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 50%;
+`;
 
-  const Image = styled.img`
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 50%;
-    opacity: ${active? 1: 0.5};
-  `;
+const X = styled.i`
+  position: relative;
+  top: -38px;
+  color: red;
+`;
 
-  return (
-    <Button onClick={() => handleClick(index)}>
-      <Holder>
-        <Image src={`https://s3.amazonaws.com/civ6-drafter/leaders/${leader.split(' ').join('_')}/civflag.png`}/>
-      </Holder>
-      <Label>
-        {nation}
-      </Label>
-    </Button>
-  )
-};
+const CivButton = ({ leader, nation, active, index, handleClick }) => (
+  <Button onClick={() => handleClick(index)}>
+    <Holder style={{background:`${active? 'transparent':'rgba(20,20,20,0.9)'}`}}>
+      <Image 
+        src={`https://s3.amazonaws.com/civ6-drafter/leaders/${leader.split(' ').join('_')}/civflag.png`}
+        style={{opacity:`${active? 1: 0.25}`}}
+      />
+      {
+        active
+        ? <div />
+        : <X className="material-icons">close</X>
+      }
+    </Holder>
+    <Label>
+      {nation}
+    </Label>
+  </Button>
+);
 
 export default CivButton;
 
