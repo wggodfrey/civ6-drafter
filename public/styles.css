@@ -13,3 +13,10 @@ button:focus {
   outline: none !important;
   outline-offset: none !important;
 }
+
+ul {
+  list-style: none;
+  padding-inline-start: 0;
+  margin: 0;
+  padding: 0;
+}

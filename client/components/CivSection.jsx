@@ -7,7 +7,7 @@ const Wrapper = styled.div`
   width: 100%;
   min-width: 725px;
   max-width: 1000px;
-  margin: 10px auto 20px;
+  margin: 10px auto 15px;
   padding: 0;
 `;
 
@@ -22,9 +22,9 @@ const Title = styled.div`
 `;
 
 const Options = styled.div`
-  margin: 0px 13px;
+  margin: 0px 5px;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
 `;
 
@@ -39,14 +39,16 @@ const CivSection = ({ dlcs, civs }) => (
           ? <CivButton
               key={`civ_${i}`}
               leader={civ.leader}
+              nation={civ.nation}
               active={civ.active}
               index={i}
             />
           : <div 
-            key={`civ_${i}`}
+              key={`civ_${i}`}
+              style={{display:'none'}}
             />
         ))
-      : <div />
+      : <div/>
     }
     </Options>
   </Wrapper>

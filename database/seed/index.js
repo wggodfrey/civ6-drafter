@@ -37,6 +37,7 @@ Civ.collection.deleteMany({}, () => {
               ability_desc: leader[7],
               traits: traits.filter(trait => trait[1] = leader[1]),
             };
+            console.log(leader)
             Civ.collection.insertOne(civ);
           });
         });

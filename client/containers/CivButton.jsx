@@ -8,7 +8,6 @@ const mapStateToProps = null;
 
 const mapDispatchToProps = dispatch => ({
   handleClick: index => {
-    console.log(index);
     dispatch(toggCiv(index));
   },
 });

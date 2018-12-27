@@ -2,26 +2,29 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Button = styled.button`
-  min-width: 70px;
-  margin: 0;
-  flex-grow: 1;
+  margin: 0 0 7px 0;
   padding: 0;
   background: transparent;
-  text-align: center;
 `;
 
-const CivButton = ({ leader, active, index, handleClick }) => {
+const Label = styled.div`
+  color: #525252;
+  font-family: 'Roboto Condensed';
+  font-size: 12px;
+`;
+
+const CivButton = ({ leader, nation, active, index, handleClick }) => {
 
   const Holder = styled.div`
     width: 50px;
     height: 50px;
-    margin: 0px auto;
+    margin: 0px 10px;
     padding: 5px;
     border-radius: 30px;
     background: ${active? 'transparent':'red'};
     transition: background 250ms, color 250ms;
     &:hover {
-      background: #d3d3d3;
+      background: ${active? '#d3d3d3':'red'};
     }
   `;
 
@@ -29,7 +32,7 @@ const CivButton = ({ leader, active, index, handleClick }) => {
     max-width: 100%;
     max-height: 100%;
     border-radius: 50%;
-    opacity: ${active? 1: 0.2};
+    opacity: ${active? 1: 0.5};
   `;
 
   return (
@@ -37,6 +40,9 @@ const CivButton = ({ leader, active, index, handleClick }) => {
       <Holder>
         <Image src={`https://s3.amazonaws.com/civ6-drafter/leaders/${leader.split(' ').join('_')}/civflag.png`}/>
       </Holder>
+      <Label>
+        {nation}
+      </Label>
     </Button>
   )
 };
