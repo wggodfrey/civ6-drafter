@@ -19,7 +19,7 @@ const Banner = () => {
 
   return (
     <Wrapper>
-      <Title>civ6 drafter</Title>
+      <Title>civ6-drafter</Title>
     </Wrapper>
   )
 };

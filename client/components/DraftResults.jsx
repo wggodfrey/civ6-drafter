@@ -14,7 +14,7 @@ const Wrapper = styled.div`
 
 const Title = styled.div`
   width: calc(100% - 34px);
-  margin: 5px 5px 10px 5px;
+  margin: 5px 5px 2px 5px;
   padding: 5px 13px;
   color: #525252;
   font-family: 'Roboto Condensed';

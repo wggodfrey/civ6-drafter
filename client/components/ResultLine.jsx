@@ -15,7 +15,7 @@ const Player = styled.span`
   font-size: 13px;
   height: 48px;
   line-height: 48px;
-  width: 60px;
+  width: 50px;
 `;
 
 const Civ = styled.img`
