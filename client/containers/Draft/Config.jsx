@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 
-import DraftConfig from './../components/DraftConfig';
+import DraftConfig from './../../components/Draft/Config';
 
-import { toggMenu1, toggMenu2, setPlayers, setCivsPer } from './../actions/settings';
+import { toggMenu1, toggMenu2, setPlayers, setCivsPer } from './../../actions/settings';
 
 const mapStateToProps = state => ({
   players: state.settings.players,

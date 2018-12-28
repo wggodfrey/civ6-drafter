@@ -1,15 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import DraftConfig from './../containers/DraftConfig';
-import DraftButton from './../containers/DraftButton';
-import DraftResults from './../containers/DraftResults';
+import DraftConfig from './../../containers/Draft/Config';
+import DraftButton from './../../containers/Draft/Button';
+import DraftResults from './../../containers/Draft/Results';
 
 const Wrapper = styled.div`
   width: 100%;
   min-width: 725px;
   max-width: 1000px;
-  margin: 10px auto 15px;
+  margin: 75px auto 15px;
   padding: 0;
 `;
 

@@ -6,7 +6,7 @@ const Wrapper = styled.div`
   padding: 0px 5px;
   color: #525252;
   font-family: 'Roboto Condensed';
-  height: 32px;
+  height: 34px;
 `;
 
 const Label = styled.span`
@@ -19,14 +19,14 @@ const Label = styled.span`
 
 const List = styled.ul`
   float: left;
-  height: 32px;
+  height: 34px;
   width: calc(100% - 130px);
   text-align: center;
 `;
 
 const ActiveItem = styled.li`
   cursor: pointer;
-  line-height: 32px;
+  line-height: 34px;
   border-radius: 3px;
   background: #ffffff;
 `;

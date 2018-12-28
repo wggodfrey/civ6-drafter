@@ -15,6 +15,7 @@ const getCivs = () => {
     axios.get('/civs')
       .then(({ data }) => {
         let civs = data.map(c => ({...c, active: true}));
+        console.log(civs)
         dispatch(initCivs(civs));
       });
   };

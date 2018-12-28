@@ -1,14 +1,15 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ResultLine from './ResultLine';
+import ResultSet from './ResultSet';
+import ToolTip from './../../containers/Draft/ToolTip';
 
 const Wrapper = styled.div`
   width: 40%;
   height: 200px;
   display: inline-block;
   float: left;
-  margin: 0 0 30px 0;
+  margin: 5px 0 30px 0;
   padding: 0;
 `;
 
@@ -22,12 +23,17 @@ const Title = styled.div`
   border-bottom: 2px solid #525252;
 `;
 
-const DraftResults = ({results}) => (
+const DraftResults = ({results, tooltip}) => (
   <Wrapper>
     <Title>Draft Results</Title>
     {
+      tooltip
+      ? <ToolTip />
+      : <div />
+    }
+    {
       Object.keys(results).map((player, i) => 
-        <ResultLine 
+        <ResultSet 
           key={`res_${i}`}
           player={player} 
           civs={results[player]}
