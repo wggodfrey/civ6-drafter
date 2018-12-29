@@ -21,3 +21,9 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+p {
+  margin-block-start: 0px;
+  margin-block-end: 4px;
+
+}

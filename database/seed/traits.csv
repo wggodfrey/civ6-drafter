@@ -1,6 +1,24 @@
 id,leader_id,name,desc
-0,0,P-51 Mustang,"American unique Atomic era air unit that replaces the Fighter. Gains +5 attack against fighter aircraft, has +2 flight range, and gains +50% experience."
-1,0,Rough Rider,American unique Industrial era unit when Teddy Roosevelt is their leader. <culture/> Culture is earned from kills on their <capital/> Capital's continent. +5 <combat/> Combat Strength when fighting on hills. Lower maintenance cost.
-2,0,Film Studio,A building unique to America. +100% <tourism/> Tourism pressure from this city toward other cities in the Modern era.
-3,1,Mamluk,"Arabian unique Medieval era unit that replaces the Knight. Heals at the end of every turn, even after moving or attacking."
-4,1,Madrasa,A building unique to Arabia. Bonus <faith/> Faith equal to the adjacency bonus of the Campus district.
+0,0,P-51 Mustang,<p>American unique Atomic era air unit that replaces the Fighter. Gains +5 attack against fighter aircraft<comma/> has +2 flight range<comma/> and gains +50% experience.</p>
+1,0,Rough Rider,<p>American unique Industrial era unit when Teddy Roosevelt is their leader. <culture/> Culture is earned from kills on their <capital/> Capital's continent. +5 <combat/> Combat Strength when fighting on hills. Lower maintenance cost.</p>
+2,0,Film Studio,<p>A building unique to America. +100% <tourism/> Tourism pressure from this city toward other cities in the Modern era.</p>
+3,1,Mamluk,<p>Arabian unique Medieval era unit that replaces the Knight. Heals at the end of every turn<comma/> even after moving or attacking.</p>
+4,1,Madrasa,<p>A building unique to Arabia. Bonus <faith/> Faith equal to the adjacency bonus of the Campus district.<p>
+,2,Eagle Warrior,<p>Aztec unique Ancient Era unit that replaces the Warrior. Has a chance to capture other civilization’s military units by turning them into Builders.</p>
+,2,Tlachtli,<p>A building unique to the Aztecs. Provides an <amenity/> Amenity<comma/> +2 <faith/> Faith<comma/> and a <greatgeneral/> Great General Point.</p>
+,3,Minas Geraes,<p>Brazilian unique Industrial era unit that replaces the Battleship. Stronger than the Battleship. Unlocked by Nationalism.</p>
+,3,Street Carnival,<p>A district unique to Brazil. Replaces the Entertainment Complex district<comma/> provides +2 </amenity> Amenities<comma/> and is cheaper to build. Also unlocks the Carnival project<comma/> which grants an additional +1 <amenity/> Amenity when underway and a variety of <greatperson/> Great People points once completed.</p>
+,3,Copacabana,<p>A district unique to Brazil. Replaces the Water Park district<comma/> and provide +2 <amenity/> Amenities. Also unlocks the Carnival project<comma/> which grants an additional +1 <amenity/> Amenity when underway and a variety of <greatperson/> Great People points once completed. Cannot be built in a city with a Street Carnival. Cannot be built on Reef.</p>
+,4,Crouching Tiger,<p>Chinese unique Midieval era unit. Ranged unit with a <range/> Range of 1 and high combat strength.</p>
+,4,Great Wall,<p>Unlocks the Builder ability to construct the Great Wall<comma/> unique to China.</p><p>Provides an increase to <combat/> Defense. Bonus to <gold/> Gold if adjacent to other segments. Additional <culture/> Culture and <tourism/> Tourism as you advance through the Technology Tree for adjacent segments. Must be built in a line along the borders of your empire.</p>
+,5,Maryannu Chariot Archer,<p>Egyptian unique Ancient era ranged unit that replaces the Heavy Chariot. 4 <movement/> Movement when starting in open terrain.</p>
+,5,Sphinx,<p>Unlocks the builder ability to construct a Sphinx<comma/> unique to Egypt.</p>
+
+<p>+1 <faith /> Faith and +1<culture/> Culture. +1 Appeal. +2 <faith/> Faith if next to a wonder. Cannot be built next to another Sphinx. Can be built on floodplains.</p>
+,6,Redcoat,<p>English unique Industrial era unit when Victoria is their leader. +10 <combat/> Combat Strength when fighting on a continent other than that of your capital. No disembark cost.</p>
+,6,Sea Dog,<p>English unique Renaissance era naval unit that replaces the Privateer. Can capture enemy ships. Cannot be seen unless adjacent to it.</p>
+,6,Royal Navy Dockyard,<p>A district unique to England for naval activity in your city. Replaces the Harbor district. Also removes the <movement/> Movement penalty for embarking and disembarking to and from this tile. Must be built on Coast or Lake Terrain adjacent to land.</p>
+
+<p>+1 <movement/> Movement for all naval units built in Dockyard. +2 <gold/> Gold and +4 Loyalty per turn when built on a foreign continent. Cannot be built on Reef.</p>
+,,,
+,,,

@@ -1,3 +1,4 @@
+const mongoose = require('mongoose');
 const promise = require('bluebird');
 const path    = require('path');
 const fs      = promise.promisifyAll(require('fs'));
@@ -17,30 +18,41 @@ String.prototype.splitCSV = function(sep) {
   } return foo;
 };
 
+String.prototype.insertHTML = function() {
+  let string = this;
+  string = string.split('<culture/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/culture.png\'/>');
+  string = string.split('<faith/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/faith.png\'/>');
+  string = string.split('<food/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/food.png\'/>');
+  string = string.split('<gold/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/gold.png\'/>');
+  string = string.split('<production/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/production.png\'/>');
+  string = string.split('<science/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/science.png\'/>');
+  string = string.split('<tourism/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/tourism.png\'/>');
+  string = string.split('<visibility/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/visibility.png\'/>');
+  string = string.split('<amenity/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/amenity.png\'/>');
+  string = string.split('<combat/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/combat.png\'/>');
+  string = string.split('<housing/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/housing.png\'/>');
+  string = string.split('<population/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/population.png\'/>');
+  string = string.split('<ranged/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/ranged.png\'/>');
+  string = string.split('<relic/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/relic.png\'/>');
+  string = string.split('<route/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/route.png\'/>');
+  string = string.split('<eureka/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/eureka.png\'/>');
+  string = string.split('<inspiration/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/inspiration.png\'/>');
+  string = string.split('<greatperson/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/greatperson.png\'/>');
+  string = string.split('<greatprophet/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/greatprophet.png\'/>');
+  string = string.split('<greatgeneral/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/greatgeneral.png\'/>');
+  string = string.split('<artifact/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/artifact.png\'/>');
+  string = string.split('<movement/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/movement.png\'/>');
+  string = string.split('<range/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/range.png\'/>');
+  return string;
+}
+
 Civ.collection.deleteMany({}, () => {
   fs.readFileAsync(path.join(__dirname, 'leaders.csv'), 'utf-8')
     .then(data => {
-      let leaders = data.toString();
-      leaders = leaders.split('<culture/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/resources/culture.png\'/>');
-      leaders = leaders.split('<faith/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/resources/faith.png\'/>');
-      leaders = leaders.split('<food/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/resources/food.png\'/>');
-      leaders = leaders.split('<gold/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/resources/gold.png\'/>');
-      leaders = leaders.split('<production/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/resources/production.png\'/>');
-      leaders = leaders.split('<science/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/resources/science.png\'/>');
-      leaders = leaders.split('<tourism/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/resources/tourism.png\'/>');
-      
-      leaders = leaders.split('<amenity/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/concepts/amenity.png\'/>');
-      leaders = leaders.split('<combat/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/concepts/combat.png\'/>');
-      leaders = leaders.split('<housing/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/concepts/housing.png\'/>');
-      leaders = leaders.split('<population/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/concepts/population.png\'/>');
-      leaders = leaders.split('<ranged/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/concepts/ranged.png\'/>');
-      leaders = leaders.split('<relic/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/concepts/relic.png\'/>');
-      leaders = leaders.split('<route/>').join('<img style=\'width:11px; height: 11px;\' src=\'https://s3.amazonaws.com/civ6-drafter/concepts/route.png\'/>');
-      leaders = leaders.split(/\r?\n/).slice(1);
+      let leaders = data.toString().insertHTML().split(/\r?\n/).slice(1);
       fs.readFileAsync(path.join(__dirname, 'traits.csv'), 'utf-8')
         .then(data => {
-          let traits = data.toString().split(/\r?\n/).slice(1).map(trait => trait.splitCSV());
-          console.log(traits);
+          let traits = data.toString().split(/\r?\n/).slice(1).map(trait => trait.insertHTML().splitCSV());
           leaders.forEach(l => {
             let leader = l.splitCSV();
             let civ = {
@@ -48,7 +60,7 @@ Civ.collection.deleteMany({}, () => {
               dlc_id: leader[1],
               leader: leader[2],
               nation: leader[5],
-              bonus_name: leader[3],
+              bonus_name: leader[3].split('<comma/>').join(','),
               bonus_desc: leader[4].split('<comma/>').join(','),
               ability_name: leader[6],
               ability_desc: leader[7].split('<comma/>').join(','),
@@ -56,6 +68,7 @@ Civ.collection.deleteMany({}, () => {
             };
             Civ.collection.insertOne(civ);
           });
-        });
+        })
+        .then(() => mongoose.connection.close());
     });
 });

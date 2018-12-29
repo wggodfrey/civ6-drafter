@@ -19,7 +19,7 @@ const Carat = styled.span`
   border-bottom: 10px solid transparent;
   border-left: 10px solid #ffffff;
   position: absolute;
-  top: 195px;
+  top: 295px;
 `;
 
 const Face = styled.img`
@@ -117,6 +117,7 @@ const TraitImg = styled.div`
 
 const TraitDesc = styled.div`
   width: calc(100% - 50px);
+  margin: 1px 0px 0px;
   display: inline-block;
   float: left;
   font-family: 'Roboto';
@@ -127,7 +128,7 @@ const TraitDesc = styled.div`
 
 
 const ToolTip = ({posX, posY, content}) => (
-  <Wrapper style={{top: `${posY - 200}px`, left: `${posX - 340}px`}}>
+  <Wrapper style={{top: `${posY - 300}px`, left: `${posX - 340}px`}}>
     <Carat style={{borderLeft:'solid 10px steelblue',left:'320px'}}/>
     <Carat style={{left:'318.5px'}}/>
     <Face src={`https://s3.amazonaws.com/civ6-drafter/leaders/${content.leader.split(' ').join('_')}/headshot.png`} />
@@ -144,7 +145,7 @@ const ToolTip = ({posX, posY, content}) => (
           <TraitName>{trait[2]}</TraitName>
           <Trait>
             <TraitImg />
-            <i><TraitDesc dangerouslySetInnerHTML={{__html: trait[3]}} /></i>
+            <TraitDesc dangerouslySetInnerHTML={{__html: trait[3]}} />
           </Trait>
         </div>
       )
