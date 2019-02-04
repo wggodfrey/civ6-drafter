@@ -1,15 +1,15 @@
 import React from 'react';
-import store from './../store/index.js';
+import store from 'store';
 
-import Banner from './Banner';
-import DlcSection from './../containers/Dlcs/Section';
-import CivSection from './../containers/Civs/Section';
-import DraftSection from './Draft/Section';
+import Banner from 'components/Banner';
+import DlcSection from 'containers/Dlcs/Section';
+import CivSection from 'containers/Civs/Section';
+import DraftSection from 'components/Draft/Section';
 
-import { getDlcs } from './../actions/dlcs.js';
-import { getCivs } from './../actions/civs.js';
-import { getSettings } from './../actions/settings.js';
-import { getToolTip } from './../actions/tooltip.js';
+import { getDlcs } from 'actions/dlcs.js';
+import { getCivs } from 'actions/civs.js';
+import { getSettings } from 'actions/settings.js';
+import { getToolTip } from 'actions/tooltip.js';
 
 class App extends React.Component {
 

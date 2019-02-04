@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import DropDown from './DropDown';
+import DropDown from 'components/Draft/DropDown';
 
 const Wrapper = styled.div`
   width: 40%;

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ResultSet from './ResultSet';
-import ToolTip from './../../containers/Draft/ToolTip';
+import ResultSet from 'components/Draft/ResultSet';
+import ToolTip from 'containers/Draft/ToolTip';
 
 const Wrapper = styled.div`
   width: 40%;

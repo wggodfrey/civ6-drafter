@@ -20,29 +20,29 @@ String.prototype.splitCSV = function(sep) {
 
 String.prototype.insertHTML = function() {
   let string = this;
-  string = string.split('<culture/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/culture.png\'/>');
-  string = string.split('<faith/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/faith.png\'/>');
-  string = string.split('<food/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/food.png\'/>');
-  string = string.split('<gold/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/gold.png\'/>');
-  string = string.split('<production/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/production.png\'/>');
-  string = string.split('<science/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/science.png\'/>');
-  string = string.split('<tourism/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/tourism.png\'/>');
-  string = string.split('<visibility/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/visibility.png\'/>');
-  string = string.split('<amenity/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/amenity.png\'/>');
-  string = string.split('<combat/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/combat.png\'/>');
-  string = string.split('<housing/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/housing.png\'/>');
-  string = string.split('<population/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/population.png\'/>');
-  string = string.split('<ranged/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/ranged.png\'/>');
-  string = string.split('<relic/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/relic.png\'/>');
-  string = string.split('<route/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/route.png\'/>');
-  string = string.split('<eureka/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/eureka.png\'/>');
-  string = string.split('<inspiration/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/inspiration.png\'/>');
-  string = string.split('<greatperson/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/greatperson.png\'/>');
-  string = string.split('<greatprophet/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/greatprophet.png\'/>');
-  string = string.split('<greatgeneral/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/greatgeneral.png\'/>');
-  string = string.split('<artifact/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/artifact.png\'/>');
-  string = string.split('<movement/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/movement.png\'/>');
-  string = string.split('<range/>').join('<img style=\'width:10px; height: 10px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/range.png\'/>');
+  string = string.split('<culture/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/culture.png\'/>');
+  string = string.split('<faith/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/faith.png\'/>');
+  string = string.split('<food/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/food.png\'/>');
+  string = string.split('<gold/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/gold.png\'/>');
+  string = string.split('<production/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/production.png\'/>');
+  string = string.split('<science/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/science.png\'/>');
+  string = string.split('<tourism/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/tourism.png\'/>');
+  string = string.split('<visibility/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/visibility.png\'/>');
+  string = string.split('<amenity/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/amenity.png\'/>');
+  string = string.split('<combat/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/combat.png\'/>');
+  string = string.split('<housing/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/housing.png\'/>');
+  string = string.split('<population/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/population.png\'/>');
+  string = string.split('<ranged/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/ranged.png\'/>');
+  string = string.split('<relic/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/relic.png\'/>');
+  string = string.split('<route/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/route.png\'/>');
+  string = string.split('<eureka/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/eureka.png\'/>');
+  string = string.split('<inspiration/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/inspiration.png\'/>');
+  string = string.split('<greatperson/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/greatperson.png\'/>');
+  string = string.split('<greatprophet/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/greatprophet.png\'/>');
+  string = string.split('<greatgeneral/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/greatgeneral.png\'/>');
+  string = string.split('<artifact/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/artifact.png\'/>');
+  string = string.split('<movement/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/movement.png\'/>');
+  string = string.split('<range/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/range.png\'/>');
   return string;
 }
 

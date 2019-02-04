@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import DraftConfig from './../../containers/Draft/Config';
-import DraftButton from './../../containers/Draft/Button';
-import DraftResults from './../../containers/Draft/Results';
+import DraftConfig from 'containers/Draft/Config';
+import DraftButton from 'containers/Draft/Button';
+import DraftResults from 'containers/Draft/Results';
 
 const Wrapper = styled.div`
   width: 100%;

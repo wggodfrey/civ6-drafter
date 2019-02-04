@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import ResultItem from './../../containers/Draft/ResultItem';
+import ResultItem from 'containers/Draft/ResultItem';
 
 const Wrapper = styled.div`
   padding: 0 18px 0;
