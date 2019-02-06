@@ -31,9 +31,9 @@ const Button = styled.button`
   }
 `;
 
-const DraftButton = ({dlcs, civs, players, civsper, handleSelect}) => (
+const DraftButton = ({dlcs, civs, players, civsper, ais, handleSelect}) => (
   <Wrapper>
-    <Button onClick={() => handleSelect(dlcs, civs, players, civsper)}>
+    <Button onClick={() => handleSelect(dlcs, civs, players, civsper, ais)}>
       Draft
     </Button>
   </Wrapper>

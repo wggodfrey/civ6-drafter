@@ -23,6 +23,18 @@ const Title = styled.div`
   border-bottom: 2px solid #525252;
 `;
 
+const SubHeader = styled.div`
+  width: calc(100% - 34px);
+  float: left;
+  margin: 5px 5px 2px 5px;
+  padding: 0px 13px 2px;
+  color: #a9a9a9;
+  font-family: Roboto;
+  font-weight: 400;
+  font-size: 11px;
+  border-bottom: solid 1px #a9a9a9;
+`;
+
 const DraftResults = ({results, tooltip}) => (
   <Wrapper>
     <Title>Draft Results</Title>
@@ -32,13 +44,39 @@ const DraftResults = ({results, tooltip}) => (
       : <div />
     }
     {
-      Object.keys(results).map((player, i) => 
-        <ResultSet 
-          key={`res_${i}`}
-          player={player} 
-          civs={results[player]}
-        />
-      )
+      (results['Player 1'] && results['Player 1'].length > 0)
+      ? <div>
+          <SubHeader>Human Players</SubHeader>
+          {
+            Object.keys(results).filter(d => d !== 'AIs').map((player, i) => 
+              <ResultSet 
+                key={`res_${i}`}
+                player={player} 
+                civs={results[player]}
+              />
+            )
+          }
+        </div>
+      : <div />
+    }
+    {
+      (results['AIs'] && results['AIs'].length > 0)
+      ? <div>
+          <SubHeader>AI Players</SubHeader>
+          {
+            results['AIs'].map((player, i) => {
+              let index = i + Object.keys(results).length;
+              return (
+                <ResultSet 
+                  key={`res_${index}`}
+                  player={`Player ${index}`} 
+                  civs={[player]}
+                />
+              )
+            })
+          }
+        </div>
+      : <div />
     }
   </Wrapper>
 );

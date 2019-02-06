@@ -4,6 +4,7 @@ import styled from 'styled-components';
 import ResultItem from 'containers/Draft/ResultItem';
 
 const Wrapper = styled.div`
+  display: block;
   padding: 0 18px 0;
   height: 46px;
   float: left;
@@ -22,7 +23,12 @@ const Player = styled.span`
 
 const ResultSet = ({player, civs}) => (
   <Wrapper>
-    <Player>{player}</Player>
+    {
+      player
+      ? <Player>{player}</Player>
+      : <div/>
+    }
+    
     {
       civs.map((civ, i) => 
         <ResultItem 

@@ -9,10 +9,11 @@ const mapStateToProps = state => ({
   civs: state.civs,
   players: state.settings.players,
   civsper: state.settings.civsper,
+  ais: state.settings.ais,
 });
 
 const mapDispatchToProps = dispatch => ({
-  handleSelect: (dlcs, civs, players, civsper) => {
+  handleSelect: (dlcs, civs, players, civsper, ais) => {
     let availableCivs = civs.filter(civ => civ.active && dlcs[civ.dlc_id].active);
     let results = {};
     for (let i = 1; i <= players; i++) {
@@ -22,6 +23,12 @@ const mapDispatchToProps = dispatch => ({
         results[`Player ${i}`].push(availableCivs[random]);
         availableCivs.splice(random, 1);
       }
+    }
+    results['AIs'] = [];
+    for (let i = 1; i <= ais; i++) {
+      let random = Math.floor(Math.random() * availableCivs.length);
+      results['AIs'].push(availableCivs[random]);
+      availableCivs.splice(random, 1);
     }
     dispatch(setResults(results));
   },
