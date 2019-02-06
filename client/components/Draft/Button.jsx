@@ -3,18 +3,15 @@ import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
-  width: 15%;
-  height: 200px;
+  width: calc(100%);
   display: inline-block;
-  float: left;
-  margin: 0 0 30px 0;
   padding: 0;
 `;
 
 const Button = styled.button`
-  width: 80%;
+  width: 40%;
   height: 38px;
-  margin: 0 10%;
+  margin: 0 30%;
   line-height: 38px;
   border-radius: 3px;
   color: #525252;
@@ -23,9 +20,6 @@ const Button = styled.button`
   text-align: center;
   transition: background 450ms, color 450ms;
   position: relative;
-  top: 40%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
   &:hover {
     background: steelblue !important;
     color: #ffffff !important;

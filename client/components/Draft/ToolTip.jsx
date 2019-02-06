@@ -135,7 +135,7 @@ const ToolTip = ({posX, posY, content}) => (
     <Leader>{content.leader}</Leader>
     <BonusName>{content.bonus_name}</BonusName>
     <BonusDesc dangerouslySetInnerHTML={{__html: content.bonus_desc}} />
-    <Flag src={`https://s3.amazonaws.com/civ6-drafter/leaders/${content.leader.split(' ').join('_')}/civflag.png`} />
+    <Flag src={`https://s3.amazonaws.com/civ6-drafter/leaders/${content.leader.split(' ').join('_')}/${content.nation}.png`} />
     <Nation>{content.nation}</Nation>
     <AbilityName>{content.ability_name}</AbilityName>
     <AbilityDesc dangerouslySetInnerHTML={{__html: content.ability_desc}} />

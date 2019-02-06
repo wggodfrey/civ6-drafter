@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 
 import DraftConfig from 'containers/Draft/Config';
-import DraftButton from 'containers/Draft/Button';
 import DraftResults from 'containers/Draft/Results';
 
 const Wrapper = styled.div`
@@ -16,7 +15,6 @@ const Wrapper = styled.div`
 const DraftSection = () => (
   <Wrapper>
     <DraftConfig/>
-    <DraftButton/>
     <DraftResults/>
   </Wrapper>
 );

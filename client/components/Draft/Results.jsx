@@ -6,11 +6,11 @@ import ResultSet from 'components/Draft/ResultSet';
 import ToolTip from 'containers/Draft/ToolTip';
 
 const Wrapper = styled.div`
-  width: 60%;
+  width: calc(200%/3);
   height: 200px;
   display: inline-block;
   float: left;
-  margin: 5px 0 30px 0;
+  margin: 0 0 30px 0;
   padding: 0;
 `;
 
@@ -84,7 +84,7 @@ const DraftResults = ({results, tooltip}) => (
 
 DraftResults.propTypes = {
   results: PropTypes.objectOf(PropTypes.any),
-  tooltip: PropTypes.string,
+  tooltip: PropTypes.objectOf(PropTypes.any),
 };
 
 export default DraftResults;

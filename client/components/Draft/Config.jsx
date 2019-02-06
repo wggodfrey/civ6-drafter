@@ -2,10 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 
+import DraftButton from 'containers/Draft/Button';
 import DropDownSelect from 'components/Common/DropDownSelect';
 
 const Wrapper = styled.div`
-  width: 25%;
+  width: calc(100%/3);
   height: 200px;
   display: inline-block;
   float: left;
@@ -49,6 +50,7 @@ const DraftConfig = (
       active={ais}
       handleSelect={handleSelectAIs}
     />
+    <DraftButton />
   </Wrapper>
 );
 
