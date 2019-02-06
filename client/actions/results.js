@@ -3,4 +3,4 @@ const setResults = results => ({
   payload: results,
 });
 
-export { setResults };
+export default setResults;

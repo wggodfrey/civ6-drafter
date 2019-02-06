@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import SectionHeader from 'components/Common/SectionHeader';
 import CivButton from 'containers/Civs/Button';
@@ -47,6 +48,11 @@ const CivSection = ({ dlcs, civs }) => (
     </Options>
   </Wrapper>
 );
+
+CivSection.propTypes = {
+  dlcs: PropTypes.arrayOf(PropTypes.any).isRequired,
+  civs: PropTypes.arrayOf(PropTypes.any).isRequired,
+};
 
 export default CivSection;
 

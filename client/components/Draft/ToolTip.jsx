@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   width: 310px;
@@ -151,5 +152,23 @@ const ToolTip = ({posX, posY, content}) => (
     }
   </Wrapper>
 );
+
+ToolTip.propTypes = {
+  posX: PropTypes.number,
+  posY: PropTypes.number,
+  content: PropTypes.shape({
+    _id: PropTypes.string,
+    id: PropTypes.string.isRequired,
+    active: PropTypes.bool.isRequired,
+    dlc_id: PropTypes.number.isRequired,
+    leader: PropTypes.string.isRequired,
+    bonus_name: PropTypes.string.isRequired,
+    bonus_desc: PropTypes.string.isRequired,
+    nation: PropTypes.string.isRequired,
+    ability_name: PropTypes.string.isRequired,
+    ability_desc: PropTypes.string.isRequired,
+    traits: PropTypes.arrayOf(PropTypes.any).isRequired,
+  }),
+};
 
 export default ToolTip;

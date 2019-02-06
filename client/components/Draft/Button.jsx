@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   width: 15%;
@@ -38,5 +39,14 @@ const DraftButton = ({dlcs, civs, players, civsper, ais, handleSelect}) => (
     </Button>
   </Wrapper>
 );
+
+DraftButton.propTypes = {
+  dlcs: PropTypes.arrayOf(PropTypes.any).isRequired,
+  civs: PropTypes.arrayOf(PropTypes.any).isRequired,
+  players: PropTypes.number,
+  civsper: PropTypes.number,
+  ais: PropTypes.number,
+  handleSelect: PropTypes.func.isRequired,
+};
 
 export default DraftButton;

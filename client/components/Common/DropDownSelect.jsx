@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   position: relative;
@@ -170,7 +171,14 @@ class DropDownSelect extends React.Component {
       </Wrapper>
     )
   }
+};
 
+DropDownSelect.propTypes = {
+  labelSingular: PropTypes.string.isRequired,
+  labelPlural: PropTypes.string.isRequired,
+  options: PropTypes.arrayOf(PropTypes.any).isRequired,
+  active: PropTypes.number,
+  handleSelect: PropTypes.func.isRequired,
 }
 
 export default DropDownSelect;

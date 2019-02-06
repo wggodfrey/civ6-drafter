@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import DropDownSelect from 'components/Common/DropDownSelect';
 
@@ -23,7 +24,7 @@ const Title = styled.div`
 `;
 
 const DraftConfig = (
-  {dlcs, civs, players, civsper, ais, handleSelectPlayers, handleSelectCivsPer, handleSelectAIs}
+  {players, civsper, ais, handleSelectPlayers, handleSelectCivsPer, handleSelectAIs}
   ) => (
   <Wrapper>
     <Title>Draft Configuration</Title>
@@ -50,6 +51,15 @@ const DraftConfig = (
     />
   </Wrapper>
 );
+
+DraftConfig.propTypes = {
+  players: PropTypes.number,
+  civsper: PropTypes.number,
+  ais: PropTypes.number,
+  handleSelectPlayers: PropTypes.func.isRequired,
+  handleSelectCivsPer: PropTypes.func.isRequired,
+  handleSelectAIs: PropTypes.func.isRequired,
+};
 
 export default DraftConfig;
 

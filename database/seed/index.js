@@ -1,13 +1,12 @@
 const mongoose = require('mongoose');
 const promise = require('bluebird');
-const path    = require('path');
-const fs      = promise.promisifyAll(require('fs'));
+const path = require('path');
+const fs = promise.promisifyAll(require('fs'));
 
-const db      = require('./index.js');
-const Civ     = require('./../models').Civ;
+const Civ = require('./../models').Civ;
 
-String.prototype.splitCSV = function(sep) {
-  for (var foo = this.split(sep = sep || ","), x = foo.length - 1, tl; x >= 0; x--) {
+String.prototype.splitCSV = function (sep) {
+  for (var foo = this.split(sep = sep || ','), x = foo.length - 1, tl; x >= 0; x--) {
     if (foo[x].replace(/'\s+$/, "'").charAt(foo[x].length - 1) == "'") {
       if ((tl = foo[x].replace(/^\s+'/, "'")).length > 1 && tl.charAt(0) == "'") {
         foo[x] = foo[x].replace(/^\s*'|'\s*$/g, '').replace(/''/g, "'");
@@ -18,7 +17,7 @@ String.prototype.splitCSV = function(sep) {
   } return foo;
 };
 
-String.prototype.insertHTML = function() {
+String.prototype.insertHTML = function () {
   let string = this;
   string = string.split('<culture/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/culture.png\'/>');
   string = string.split('<faith/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/faith.png\'/>');
@@ -44,18 +43,18 @@ String.prototype.insertHTML = function() {
   string = string.split('<movement/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/movement.png\'/>');
   string = string.split('<range/>').join('<img style=\'width:12px; height: 12px; position: relative; top: 2px;\' src=\'https://s3.amazonaws.com/civ6-drafter/icons/range.png\'/>');
   return string;
-}
+};
 
 Civ.collection.deleteMany({}, () => {
   fs.readFileAsync(path.join(__dirname, 'leaders.csv'), 'utf-8')
-    .then(data => {
-      let leaders = data.toString().insertHTML().split(/\r?\n/).slice(1);
+    .then((data) => {
+      const leaders = data.toString().insertHTML().split(/\r?\n/).slice(1);
       fs.readFileAsync(path.join(__dirname, 'traits.csv'), 'utf-8')
-        .then(data => {
-          let traits = data.toString().split(/\r?\n/).slice(1).map(trait => trait.insertHTML().splitCSV());
-          leaders.forEach(l => {
-            let leader = l.splitCSV();
-            let civ = {
+        .then((data) => {
+          const traits = data.toString().split(/\r?\n/).slice(1).map(trait => trait.insertHTML().splitCSV());
+          leaders.forEach((l) => {
+            const leader = l.splitCSV();
+            const civ = {
               id: leader[0],
               dlc_id: leader[1],
               leader: leader[2],

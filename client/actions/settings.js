@@ -16,17 +16,17 @@ const setCivsPer = number => ({
 const setAIs = number => ({
   type: 'SET_AIS',
   payload: number,
-})
+});
 
-const getSettings = () => {
-  return dispatch => {
-    const settings = {
-      players: 2,
-      civsper: 3,
-      ais: 0,
-    };
-    dispatch(initSettings(settings));
-  }
+const getSettings = () => (dispatch) => {
+  const settings = {
+    players: 2,
+    civsper: 3,
+    ais: 0,
+  };
+  dispatch(initSettings(settings));
 };
 
-export { getSettings, setPlayers, setCivsPer, setAIs };
+export {
+  getSettings, setPlayers, setCivsPer, setAIs,
+};

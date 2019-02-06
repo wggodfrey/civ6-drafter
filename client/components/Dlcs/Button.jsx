@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Button = styled.button`
   margin: 0px 5px;
@@ -23,6 +24,13 @@ const DlcButton = ({ name, active, index, handleClick }) => (
     {name}
   </Button>
 );
+
+DlcButton.propTypes = {
+  name: PropTypes.string.isRequired,
+  active: PropTypes.bool.isRequired,
+  index: PropTypes.number.isRequired,
+  handleClick: PropTypes.func.isRequired,
+};
 
 export default DlcButton;
 

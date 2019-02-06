@@ -13,15 +13,13 @@ const fillToolTip = content => ({
   payload: content,
 });
 
-const getToolTip = () => {
-  return dispatch => {
-    const tooltip = {
-      posX: 0,
-      posY: 0,
-      content: null,
-    };
-    dispatch(initToolTip(tooltip));
-  }
+const getToolTip = () => (dispatch) => {
+  const tooltip = {
+    posX: 0,
+    posY: 0,
+    content: null,
+  };
+  dispatch(initToolTip(tooltip));
 };
 
 export { getToolTip, moveToolTip, fillToolTip };

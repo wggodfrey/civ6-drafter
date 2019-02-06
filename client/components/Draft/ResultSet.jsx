@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import ResultItem from 'containers/Draft/ResultItem';
 
@@ -35,5 +36,10 @@ const ResultSet = ({player, civs}) => (
     }
   </Wrapper>
 );
+
+ResultSet.propTypes = {
+  player: PropTypes.string.isRequired,
+  civs: PropTypes.arrayOf(PropTypes.any).isRequired,
+};
 
 export default ResultSet;

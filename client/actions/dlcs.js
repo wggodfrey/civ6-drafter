@@ -8,20 +8,18 @@ const toggDlc = dlc => ({
   payload: dlc,
 });
 
-const getDlcs = () => {
-  return dispatch => {
-    const dlcs = [
-      {name: 'Base', active: true},
-      {name: 'Poland', active: true},
-      {name: 'Australia', active: true},
-      {name: 'Persia and Macedon', active: true},
-      {name: 'Nubia', active: true},
-      {name: 'Khmer and Indonesia', active: true},
-      {name: 'Rise and Fall', active: true},
-      {name: 'Gathering Storm', active: false},
-    ];
-    dispatch(initDlcs(dlcs));
-  }
+const getDlcs = () => (dispatch) => {
+  const dlcs = [
+    { name: 'Base', active: true },
+    { name: 'Poland', active: true },
+    { name: 'Australia', active: true },
+    { name: 'Persia and Macedon', active: true },
+    { name: 'Nubia', active: true },
+    { name: 'Khmer and Indonesia', active: true },
+    { name: 'Rise and Fall', active: true },
+    { name: 'Gathering Storm', active: false },
+  ];
+  dispatch(initDlcs(dlcs));
 };
 
 export { getDlcs, toggDlc };

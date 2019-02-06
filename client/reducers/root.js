@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import dlcsReducer from './dlcs.js';
-import civsReducer from './civs.js';
-import settingsReducer from './settings.js';
-import resultsReducer from './results.js';
-import tooltipReducer from './tooltip.js';
+import dlcsReducer from 'reducers/dlcs';
+import civsReducer from 'reducers/civs';
+import settingsReducer from 'reducers/settings';
+import resultsReducer from 'reducers/results';
+import tooltipReducer from 'reducers/tooltip';
 
 const rootReducer = combineReducers({
   dlcs: dlcsReducer,

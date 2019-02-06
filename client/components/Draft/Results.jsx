@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import ResultSet from 'components/Draft/ResultSet';
 import ToolTip from 'containers/Draft/ToolTip';
@@ -80,5 +81,10 @@ const DraftResults = ({results, tooltip}) => (
     }
   </Wrapper>
 );
+
+DraftResults.propTypes = {
+  results: PropTypes.objectOf(PropTypes.any),
+  tooltip: PropTypes.string,
+};
 
 export default DraftResults;

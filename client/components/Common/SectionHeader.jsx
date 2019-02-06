@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   width: calc(100% - 34px);
@@ -71,8 +72,7 @@ class SectionHeader extends React.Component {
       <Wrapper>
         <InfoButton
           onMouseEnter={this.handleMouseAction.bind(this)}
-          onMouseLeave={this.handleMouseAction.bind(this)}
-        >
+          onMouseLeave={this.handleMouseAction.bind(this)}>
           <I className='material-icons'>info</I>
         </InfoButton>
         <Title>{title}</Title>
@@ -82,6 +82,12 @@ class SectionHeader extends React.Component {
       </Wrapper>
     )
   }
-}
+};
+
+SectionHeader.propTypes = {
+  title: PropTypes.string.isRequired,
+  description: PropTypes.string,
+};
+
 
 export default SectionHeader;

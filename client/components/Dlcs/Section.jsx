@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import PropTypes from 'prop-types';
 
 import SectionHeader from 'components/Common/SectionHeader';
 import DlcButton from 'containers/Dlcs/Button';
@@ -39,5 +40,9 @@ const DlcSection = ({ dlcs }) => (
     </Options>
   </Wrapper>
 );
+
+DlcSection.propTypes = {
+  dlcs: PropTypes.array.isRequired,
+};
 
 export default DlcSection;
