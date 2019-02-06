@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 
-import DlcButton from './../../components/Dlcs/Button';
+import DlcButton from 'components/Dlcs/Button';
 
-import { toggDlc } from './../../actions/dlcs';
+import { toggDlc } from 'actions/dlcs';
 
 const mapStateToProps = null;
 

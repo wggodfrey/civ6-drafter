@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import ToolTip from './../../components/Draft/ToolTip';
+import ToolTip from 'components/Draft/ToolTip';
 
 const mapStateToProps = state => ({
   posX: state.tooltip.posX,

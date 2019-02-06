@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 
-import DraftButton from './../../components/Draft/Button';
+import DraftButton from 'components/Draft/Button';
 
-import { setResults } from './../../actions/results';
+import { setResults } from 'actions/results';
 
 const mapStateToProps = state => ({
   dlcs: state.dlcs,

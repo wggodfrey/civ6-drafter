@@ -3,16 +3,6 @@ const initSettings = settings => ({
   payload: settings,
 });
 
-const toggMenu1 = () => ({
-  type: 'TOGG_MENU1',
-  payload: null,
-});
-
-const toggMenu2 = () => ({
-  type: 'TOGG_MENU2',
-  payload: null,
-});
-
 const setPlayers = number => ({
   type: 'SET_PLAYERS',
   payload: number,
@@ -23,16 +13,20 @@ const setCivsPer = number => ({
   payload: number,
 });
 
+const setAIs = number => ({
+  type: 'SET_AIS',
+  payload: number,
+})
+
 const getSettings = () => {
   return dispatch => {
     const settings = {
       players: 2,
       civsper: 3,
-      menu1open: false,
-      menu2open: false,
+      ais: 0,
     };
     dispatch(initSettings(settings));
   }
 };
 
-export { getSettings, setPlayers, setCivsPer, toggMenu1, toggMenu2 };
+export { getSettings, setPlayers, setCivsPer, setAIs };

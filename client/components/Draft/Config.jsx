@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import DropDown from 'components/Draft/DropDown';
+import DropDownSelect from 'components/Common/DropDownSelect';
 
 const Wrapper = styled.div`
-  width: 40%;
+  width: 30%;
   height: 200px;
   display: inline-block;
   float: left;
@@ -22,24 +22,31 @@ const Title = styled.div`
   border-bottom: 2px solid #525252;
 `;
 
-const DraftConfig = ({dlcs, civs, players, civsper, menu1open, menu2open, toggleMenu1, toggleMenu2, handleSelect1, handleSelect2}) => (
+const DraftConfig = (
+  {dlcs, civs, players, civsper, ais, handleSelectPlayers, handleSelectCivsPer, handleSelectAIs}
+  ) => (
   <Wrapper>
     <Title>Draft Configuration</Title>
-    <DropDown
-      label={`Number of Players`}
+    <DropDownSelect
+      labelSingular={`Human Player`}
+      labelPlural={`Human Players`}
       options={[1, 2, 3, 4, 5, 6, 7, 8]}
       active={players}
-      open={menu1open}
-      toggle={toggleMenu1}
-      handleSelect={handleSelect1}
+      handleSelect={handleSelectPlayers}
     />
-    <DropDown
-      label={`Civilzations per Player`}
+    <DropDownSelect
+      labelSingular={`Civ Option per Human Player`}
+      labelPlural={`Civ Options per Human Player`}
       options={[1, 2, 3, 4]}
       active={civsper}
-      open={menu2open}
-      toggle={toggleMenu2}
-      handleSelect={handleSelect2}
+      handleSelect={handleSelectCivsPer}
+    />
+    <DropDownSelect
+      labelSingular={`AI Player`}
+      labelPlural={`AI Players`}
+      options={[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]}
+      active={ais}
+      handleSelect={handleSelectAIs}
     />
   </Wrapper>
 );

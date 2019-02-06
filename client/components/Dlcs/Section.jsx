@@ -21,11 +21,20 @@ const Title = styled.div`
   border-bottom: 2px solid #525252;
 `;
 
+// const Detail = styled.div`
+//   width: calc(100% - 34px);
+//   margin: 0 5px 10px 5px;
+//   padding: 0 13px;
+//   color: #a9a9a9;
+//   font-family: 'Roboto Condensed';
+//   font-size: 12px;
+//   font-style: italic;
+// `;
+
 const Options = styled.div`
   margin: 0px 13px;
   display: flex;
 `;
-
 
 const DlcSection = ({ dlcs }) => (
   <Wrapper>
@@ -48,3 +57,4 @@ const DlcSection = ({ dlcs }) => (
 );
 
 export default DlcSection;
+// <Detail>Select the DLC packages you have access to. This will determine the civ pool available and various civ attributes.</Detail>

@@ -53,7 +53,7 @@ const BonusDesc = styled.div`
   color: #525252;
   padding: 2px 4px 4px;
   background: #efefef;
-  line-height:14px;
+  line-height: 14px;
 `;
 
 const Flag = styled.img`
@@ -87,7 +87,6 @@ const AbilityDesc = styled.div`
   color: #525252;
   padding: 2px 4px 4px;
   background: #efefef;
-  line-height:14px;
 `;
 
 const Trait = styled.div`

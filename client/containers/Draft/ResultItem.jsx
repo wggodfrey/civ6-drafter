@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 
-import ResultItem from './../../components/Draft/ResultItem';
+import ResultItem from 'components/Draft/ResultItem';
 
-import { moveToolTip, fillToolTip} from './../../actions/tooltip';
+import { moveToolTip, fillToolTip} from 'actions/tooltip';
 
 const mapStateToProps = null;
 

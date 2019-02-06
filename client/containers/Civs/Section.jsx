@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import CivSection from './../../components/Civs/Section';
+import CivSection from 'components/Civs/Section';
 
 const mapStateToProps = state => ({
   dlcs: state.dlcs,

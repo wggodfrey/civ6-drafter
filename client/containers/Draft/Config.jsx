@@ -1,21 +1,19 @@
 import { connect } from 'react-redux';
 
-import DraftConfig from './../../components/Draft/Config';
+import DraftConfig from 'components/Draft/Config';
 
-import { toggMenu1, toggMenu2, setPlayers, setCivsPer } from './../../actions/settings';
+import { setPlayers, setCivsPer, setAIs } from 'actions/settings';
 
 const mapStateToProps = state => ({
   players: state.settings.players,
   civsper: state.settings.civsper,
-  menu1open: state.settings.menu1open,
-  menu2open: state.settings.menu2open,
+  ais: state.settings.ais,
 });
 
 const mapDispatchToProps = dispatch => ({
-  toggleMenu1: () => dispatch(toggMenu1()),
-  toggleMenu2: () => dispatch(toggMenu2()),
-  handleSelect1: (e) => dispatch(setPlayers(e.target.value)),
-  handleSelect2: (e) => dispatch(setCivsPer(e.target.value)),
+  handleSelectPlayers: (e) => dispatch(setPlayers(e)),
+  handleSelectCivsPer: (e) => dispatch(setCivsPer(e)),
+  handleSelectAIs: (e) => dispatch(setAIs(e)),
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(DraftConfig);

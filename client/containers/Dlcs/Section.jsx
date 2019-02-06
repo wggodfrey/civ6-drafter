@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import DlcSection from './../../components/Dlcs/Section';
+import DlcSection from 'components/Dlcs/Section';
 
 const mapStateToProps = state => ({
   dlcs: state.dlcs,

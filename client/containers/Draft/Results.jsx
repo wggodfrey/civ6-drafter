@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 
-import DraftResults from './../../components/Draft/Results';
+import DraftResults from 'components/Draft/Results';
 
 const mapStateToProps = state => ({
   results: state.results,

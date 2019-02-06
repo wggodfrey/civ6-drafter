@@ -1,8 +1,8 @@
 import { connect } from 'react-redux';
 
-import CivButton from './../../components/Civs/Button';
+import CivButton from 'components/Civs/Button';
 
-import { toggCiv } from './../../actions/civs';
+import { toggCiv } from 'actions/civs';
 
 const mapStateToProps = null;
 
