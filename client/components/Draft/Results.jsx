@@ -5,7 +5,7 @@ import ResultSet from 'components/Draft/ResultSet';
 import ToolTip from 'containers/Draft/ToolTip';
 
 const Wrapper = styled.div`
-  width: 50%;
+  width: 60%;
   height: 200px;
   display: inline-block;
   float: left;

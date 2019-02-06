@@ -4,8 +4,8 @@ import styled from 'styled-components';
 const Wrapper = styled.div`
   display: inline-block;
   float: left;
-  width: 48px;
-  height: 48px;
+  width: 36px;
+  height: 36px;
   border-radius: 50%;
   background: transparent;
   &:hover {
@@ -23,7 +23,7 @@ const Image = styled.img`
 const ResultItem = ({civ, handleMouseIn, handleMouseOut, handleMouseMove}) => (
   <Wrapper>
     <Image 
-      src={`https://s3.amazonaws.com/civ6-drafter/leaders/${civ.leader.split(' ').join('_')}/civflag.png`}
+      src={`https://s3.amazonaws.com/civ6-drafter/leaders/${civ.leader.split(' ').join('_')}/${civ.nation}.png`}
       onMouseEnter={() => handleMouseIn(civ)}
       onMouseLeave={handleMouseOut}
       onMouseMove={handleMouseMove}

@@ -35,3 +35,13 @@ id,dlc_id,leader,bonus_name,bonus_desc,nation,ability_name,ability_desc
 33,6,Genghis Khan,Mongol Horde,All cavalry class units gain +3 <combat/> Combat Strength and a chance to capture defeated enemy cavalry class units.,Mongolia,Ortoo,Starting a <route/> Trade Route Immediately creates a <post/> Trading Post in the destination city. Receive an extra level of <visibility/> Diplomatic Visibility for possessing a <post/> Trading Post in any city of a civilization. All Mongolian units double the usual <combat/> Combat Bonus for having a higher level of <visibility/> Diplomatic Visibility than their opponent.
 34,6,Robert the Bruce,Bannockburn,Can declare a War of Liberation after gaining the Defensive Tactic Civic. +100% <production/> Production and +2 <movement/> Movement for the first 10 turns after declaring War of Liberation.,Scotland,Scottish Enlightenment,Happy cities receive an additional +5% <science/> Science and +5% <production/> Production. Happy cities generate +1 <greatscientist/> Great Scientist point per Campus and +1 <greatengineer/> Great Engineer point per Industrial Zone. Ecstatic cities double all these amounts.
 35,6,Shaka,Amabutho,May form Corps (Mercenaries Civic) and Armies (Nationalism Civic) earlier. An additional +5 <combat/> Base Combat Strength to both Corps and Armies.,Zulu,Isibongo,Cities with a garrisoned unit get +3 Loyalty per turn<comma/> or +5 if it is a Corps or Army. Conquering a city with a unit will upgrade it into a Corps or Army<comma/> if the proper Civics are unlocked.
+36,7,Dido,Founder of Carthage,Cities with a Cothon gain the unique Move Capital project<comma/> which moves the <capital/> capital to that city. Gains +1 <route/> Trade Route capacity after building the Government Plaza building. +50% <production/> Production towards districts in the city with the Government Plaza.,Phoenicia,Mediterranean Colonies,Starts with the <eureka/> Eureka for Writing. Coastal cities founded by Phoenicia and in the same continent as their <capital/> Capital will always have full Loyalty. Settlers receive +2 <movement/> Movement and sight radius while embarked<comma/> and pay no <movement/> Movement costs to embark or disembark.
+37,7,Eleanor of Aquataine,Court of Love,,England,,
+38,7,Eleanor of Aquataine,Court of Love,,France,,
+39,7,Kristina,Minerva of the North,,Sweden,,
+40,7,Kupe,Kupe’s Voyage,,Maori,,
+41,7,Mansa Musa,Sahel Merchants,,Mali,,
+42,7,Corvinius,Raven King,,Hungary,,
+43,7,Pachacuti,Qhapaq Nan,,Inca,,
+44,7,Suleiman,Grand Vizier,,Ottomans,,
+45,7,Wilfred Laurier,The Last Best Wish,,Canada,,

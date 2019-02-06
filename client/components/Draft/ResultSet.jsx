@@ -6,7 +6,8 @@ import ResultItem from 'containers/Draft/ResultItem';
 const Wrapper = styled.div`
   display: block;
   padding: 0 18px 0;
-  height: 46px;
+  height: 36px;
+  width: 100%;
   float: left;
 `;
 
@@ -16,19 +17,14 @@ const Player = styled.span`
   color: #525252;
   font-family: 'Roboto Condensed';
   font-size: 13px;
-  height: 46px;
-  line-height: 46px;
+  height: 36px;
+  line-height: 36px;
   width: 50px;
 `;
 
 const ResultSet = ({player, civs}) => (
   <Wrapper>
-    {
-      player
-      ? <Player>{player}</Player>
-      : <div/>
-    }
-    
+    <Player>{player}</Player>
     {
       civs.map((civ, i) => 
         <ResultItem 

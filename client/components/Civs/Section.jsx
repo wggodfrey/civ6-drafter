@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+import SectionHeader from 'components/Common/SectionHeader';
 import CivButton from 'containers/Civs/Button';
 
 const Wrapper = styled.div`
@@ -9,16 +10,6 @@ const Wrapper = styled.div`
   max-width: 1000px;
   margin: 10px auto 15px;
   padding: 0;
-`;
-
-const Title = styled.div`
-  width: calc(100% - 34px);
-  margin: 5px 5px 5px 5px;
-  padding: 5px 13px;
-  color: #525252;
-  font-family: 'Roboto Condensed';
-  font-size: 14px;
-  border-bottom: 2px solid #525252;
 `;
 
 const Options = styled.div`
@@ -30,11 +21,14 @@ const Options = styled.div`
 
 const CivSection = ({ dlcs, civs }) => (
   <Wrapper>
-    <Title>Available Civilizations</Title>
+      <SectionHeader 
+        title='Available Civilizations'
+        description='Below are the civs available for your game. You may choose to remove a civ from the pool by clicking its icon.'
+      />
     <Options>
     {
       dlcs.length > 0 && civs.length > 0
-      ? civs.map((civ, i) => (
+      ? civs.map((civ, i) => 
           dlcs[civ.dlc_id].active
           ? <CivButton
               key={`civ_${i}`}
@@ -47,7 +41,7 @@ const CivSection = ({ dlcs, civs }) => (
               key={`civ_${i}`}
               style={{display:'none'}}
             />
-        ))
+        )
       : <div/>
     }
     </Options>

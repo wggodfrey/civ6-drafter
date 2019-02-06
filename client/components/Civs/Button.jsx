@@ -39,13 +39,13 @@ const CivButton = ({ leader, nation, active, index, handleClick }) => (
   <Button onClick={() => handleClick(index)}>
     <Holder style={{background:`${active? 'transparent':'rgba(20,20,20,0.9)'}`}}>
       <Image 
-        src={`https://s3.amazonaws.com/civ6-drafter/leaders/${leader.split(' ').join('_')}/civflag.png`}
+        src={`https://s3.amazonaws.com/civ6-drafter/leaders/${leader.split(' ').join('_')}/${nation}.png`}
         style={{opacity:`${active? 1: 0.25}`}}
       />
       {
         active
         ? <div />
-        : <X className="material-icons">close</X>
+        : <X className='material-icons'>close</X>
       }
     </Holder>
     <Label>

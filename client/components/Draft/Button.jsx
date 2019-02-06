@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-  width: 20%;
+  width: 15%;
   height: 200px;
   display: inline-block;
   float: left;
