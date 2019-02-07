@@ -14,12 +14,23 @@ import { getCivs } from 'actions/civs.js';
 import { getSettings } from 'actions/settings.js';
 import { getToolTip } from 'actions/tooltip.js';
 
+const Wrapper = styled.div`
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: auto;
+`;
+
 const GlobalStyle = createGlobalStyle`
   body {
     margin: 0;
     height: 100%;
     background: #efefef;
+    overflow: hidden;
   }
+
   button {
     padding: 0;
     border: none;
@@ -56,14 +67,14 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
+      <Wrapper>
         <GlobalStyle />
         <Banner />
         <DlcSection />
         <CivSection />
         <DraftSection />
         <Footer />
-      </div>
+      </Wrapper>
     );
   }
 };
