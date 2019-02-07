@@ -7,7 +7,6 @@ import DropDownSelect from 'components/Common/DropDownSelect';
 
 const Wrapper = styled.div`
   width: calc(100%/3);
-  height: 200px;
   display: inline-block;
   float: left;
   margin: 0 0 30px 0;

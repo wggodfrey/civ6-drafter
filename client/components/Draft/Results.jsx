@@ -7,7 +7,6 @@ import ToolTip from 'containers/Draft/ToolTip';
 
 const Wrapper = styled.div`
   width: calc(200%/3);
-  height: 200px;
   display: inline-block;
   float: left;
   margin: 0 0 30px 0;

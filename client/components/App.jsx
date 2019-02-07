@@ -7,6 +7,7 @@ import Banner from 'components/Banner';
 import DlcSection from 'containers/Dlcs/Section';
 import CivSection from 'containers/Civs/Section';
 import DraftSection from 'components/Draft/Section';
+import Footer from 'components/Footer';
 
 import { getDlcs } from 'actions/dlcs.js';
 import { getCivs } from 'actions/civs.js';
@@ -61,6 +62,7 @@ class App extends React.Component {
         <DlcSection />
         <CivSection />
         <DraftSection />
+        <Footer />
       </div>
     );
   }
