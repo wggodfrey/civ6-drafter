@@ -14,7 +14,16 @@ const Footer = () => {
     text-align: center;
   `;
 
-  const Info = styled.div``
+  const ContactInfo = styled.div`
+    position: absolute;
+    top: 0px;
+    left: calc(50% + 60px);
+    padding: 15px 0px 5px;
+    font-family: Roboto;
+    font-weight: 200;
+    color: orchid;
+    font-size: 13px;
+  `;
 
   return (
     <Wrapper>
@@ -25,6 +34,12 @@ const Footer = () => {
         <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" title="PayPal - The safer, easier way to pay online!" alt="Donate with PayPal button" />
         <img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1" />
       </form>
+      <ContactInfo>made by 
+        <a style={{marginLeft:'3px', color:'#ffffff'}}
+           href='https://github.com/wggodfrey/civ6-drafter' 
+           target='_blank'>wggodfrey
+        </a> (2019)
+      </ContactInfo>
     </Wrapper>
   )
 };

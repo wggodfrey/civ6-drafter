@@ -10,16 +10,22 @@ const Wrapper = styled.div`
 `;
 
 const InfoButton = styled.button`
-  margin: 0 5px 0 0;
-  width: 17px;
-  height: 17px;
+  margin: 0 6px 0 0;
+  width: 16.5px;
+  height: 16.5px;
   border-radius: 50%;
   background: #525252;
-  transition: background 250ms, color 250ms;
+  transition: all 250ms;
   float: left;
   &:hover {
     background: steelblue;
   }
+`;
+
+const I = styled.i`
+  color: #ffffff;
+  font-size: 17px;
+
 `;
 
 const Title = styled.span`
@@ -44,10 +50,6 @@ const Detail = styled.span`
   }
 `;
 
-const I = styled.i`
-  color: #ffffff;
-  font-size: 17px;
-`;
 
 class SectionHeader extends React.Component {
   
