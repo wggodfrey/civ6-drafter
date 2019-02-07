@@ -13,16 +13,6 @@ const Wrapper = styled.div`
   z-index: 3;
 `;
 
-const Carat = styled.span`
-  width: 0; 
-  height: 0; 
-  border-top: 10px solid transparent;
-  border-bottom: 10px solid transparent;
-  border-left: 10px solid #ffffff;
-  position: absolute;
-  top: 295px;
-`;
-
 const Face = styled.img`
   margin: 0px 130px;
   width: 50px;
@@ -126,32 +116,51 @@ const TraitDesc = styled.div`
   color: #525252;
 `;
 
+class ToolTip extends React.Component {
+  
+  constructor(props) {
+    super(props);
+  }
 
-const ToolTip = ({posX, posY, content}) => (
-  <Wrapper style={{top: `${posY - 300}px`, left: `${posX - 340}px`}}>
-    <Carat style={{borderLeft:'solid 10px steelblue',left:'320px'}}/>
-    <Carat style={{left:'318.5px'}}/>
-    <Face src={`https://s3.amazonaws.com/civ6-drafter/leaders/${content.leader.split(' ').join('_')}/headshot.png`} />
-    <Leader>{content.leader}</Leader>
-    <BonusName>{content.bonus_name}</BonusName>
-    <BonusDesc dangerouslySetInnerHTML={{__html: content.bonus_desc}} />
-    <Flag src={`https://s3.amazonaws.com/civ6-drafter/leaders/${content.leader.split(' ').join('_')}/${content.nation}.png`} />
-    <Nation>{content.nation}</Nation>
-    <AbilityName>{content.ability_name}</AbilityName>
-    <AbilityDesc dangerouslySetInnerHTML={{__html: content.ability_desc}} />
-    {
-      content.traits.map((trait, i) => 
-        <div key={`trait_${i}`}>
-          <TraitName>{trait[2]}</TraitName>
-          <Trait>
-            <TraitImg />
-            <TraitDesc dangerouslySetInnerHTML={{__html: trait[3]}} />
-          </Trait>
-        </div>
-      )
-    }
-  </Wrapper>
-);
+  render() {
+    const { posX, posY, content } = this.props;
+    const verticalOffset = this.tooltip
+                           ? (posY + this.tooltip.clientHeight/2 > window.screen.availHeight
+                              ? window.screen.availHeight - this.tooltip.clientHeight
+                              : posY - this.tooltip.clientHeight/2)
+                           : 0
+
+    const wrapperStyle = {
+      top: `${verticalOffset}px`,
+      left: `${posX - 340}px`,
+    };
+
+    return (
+      <Wrapper ref={ref => this.tooltip = ref} style={wrapperStyle}>
+        <Face src={`https://s3.amazonaws.com/civ6-drafter/leaders/${content.leader.split(' ').join('_')}/headshot.png`} />
+        <Leader>{content.leader}</Leader>
+        <BonusName>{content.bonus_name}</BonusName>
+        <BonusDesc dangerouslySetInnerHTML={{__html: content.bonus_desc}} />
+        <Flag src={`https://s3.amazonaws.com/civ6-drafter/leaders/${content.leader.split(' ').join('_')}/${content.nation}.png`} />
+        <Nation>{content.nation}</Nation>
+        <AbilityName>{content.ability_name}</AbilityName>
+        <AbilityDesc dangerouslySetInnerHTML={{__html: content.ability_desc}} />
+        {
+          content.traits.map((trait, i) => 
+            <div key={`trait_${i}`}>
+              <TraitName>{trait[2]}</TraitName>
+              <Trait>
+                <TraitImg />
+                <TraitDesc dangerouslySetInnerHTML={{__html: trait[3]}} />
+              </Trait>
+            </div>
+          )
+        }
+      </Wrapper>
+    )
+
+  }
+}
 
 ToolTip.propTypes = {
   posX: PropTypes.number,
