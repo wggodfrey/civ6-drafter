@@ -3,6 +3,7 @@ require('./index.js');
 
 const CivSchema = new mongoose.Schema({
   dlc_id: Number,
+  ruleset_id: String,
   leader: String,
   nation: String,
   bonus_name: String,

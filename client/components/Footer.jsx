@@ -27,7 +27,7 @@ const Footer = () => {
 
   return (
     <Wrapper>
-      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+      <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
         <input type="hidden" name="cmd" value="_donations" />
         <input type="hidden" name="business" value="59KLDT9XT2EBN" />
         <input type="hidden" name="currency_code" value="USD" />

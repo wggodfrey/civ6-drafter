@@ -124,9 +124,16 @@ class ToolTip extends React.Component {
 
   render() {
     const { posX, posY, content } = this.props;
+
+    const documentHeight = Math.max( 
+                            document.body.scrollHeight, 
+                            document.body.offsetHeight, 
+                            document.documentElement.clientHeight, 
+                            document.documentElement.scrollHeight, 
+                            document.documentElement.offsetHeight);
     const verticalOffset = this.tooltip
-                           ? (posY + this.tooltip.clientHeight/2 > window.screen.availHeight - 125
-                              ? window.screen.availHeight - this.tooltip.clientHeight - 125
+                           ? (posY + this.tooltip.clientHeight/2 > documentHeight - 55
+                              ? documentHeight - this.tooltip.clientHeight - 55
                               : posY - this.tooltip.clientHeight/2)
                            : 0;
 

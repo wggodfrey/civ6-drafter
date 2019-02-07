@@ -49,7 +49,7 @@ class App extends React.Component {
 
   componentDidMount() {
     store.dispatch(getDlcs());
-    store.dispatch(getCivs());
+    store.dispatch(getCivs(6));
     store.dispatch(getSettings());
     store.dispatch(getToolTip());
   }

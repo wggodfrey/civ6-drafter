@@ -56,13 +56,14 @@ Civ.collection.deleteMany({}, () => {
             const leader = l.splitCSV();
             const civ = {
               id: leader[0],
-              dlc_id: leader[1],
-              leader: leader[2],
-              nation: leader[5],
-              bonus_name: leader[3].split('<comma/>').join(','),
-              bonus_desc: leader[4].split('<comma/>').join(','),
-              ability_name: leader[6],
-              ability_desc: leader[7].split('<comma/>').join(','),
+              ruleset_id: leader[1],
+              dlc_id: leader[2],
+              leader: leader[3],
+              nation: leader[6],
+              bonus_name: leader[4].split('<comma/>').join(','),
+              bonus_desc: leader[5].split('<comma/>').join(','),
+              ability_name: leader[7],
+              ability_desc: leader[8].split('<comma/>').join(','),
               traits: traits.filter(trait => trait[1] === leader[0]),
             };
             Civ.collection.insertOne(civ);

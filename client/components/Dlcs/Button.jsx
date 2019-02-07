@@ -17,13 +17,17 @@ const Button = styled.button`
   }
 `;
 
-const DlcButton = ({ name, active, index, handleClick }) => (
-  <Button 
-    style={{background: `${active? '#ffffff':'#d3d3d3'}`, color: `${active? '#525252':'#a9a9a9'}`}}
-    onClick={() => handleClick(index + 1)}>
-    {name}
-  </Button>
-);
+const DlcButton = ({ name, active, index, handleClick, dlcs }) => {
+  const hypotheticalToggledResult = dlcs.map((dlc, i) => i === index + 1? !dlc.active: dlc.active);
+  const hypotheticalNewMax = Math.max(...hypotheticalToggledResult.map((r, i) => r? i: 0));
+  return (
+    <Button 
+      style={{background: `${active? '#ffffff':'#d3d3d3'}`, color: `${active? '#525252':'#a9a9a9'}`}}
+      onClick={() => handleClick(index + 1, hypotheticalNewMax < 6? 6: hypotheticalNewMax)}>
+      {name}
+    </Button>
+  );
+};
 
 DlcButton.propTypes = {
   name: PropTypes.string.isRequired,

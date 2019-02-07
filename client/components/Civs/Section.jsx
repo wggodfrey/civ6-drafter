@@ -22,10 +22,10 @@ const Options = styled.div`
 
 const CivSection = ({ dlcs, civs }) => (
   <Wrapper>
-      <SectionHeader 
-        title='Available Civilizations'
-        description='Below are the civs available for your game. You may choose to remove a civ from the pool by clicking its icon.'
-      />
+    <SectionHeader 
+      title='Available Civilizations'
+      description='Below are the civs available for your game. You may choose to remove a civ from the pool by clicking its icon.'
+    />
     <Options>
     {
       dlcs.length > 0 && civs.length > 0

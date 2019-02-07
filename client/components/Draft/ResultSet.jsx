@@ -5,10 +5,9 @@ import PropTypes from 'prop-types';
 import ResultItem from 'containers/Draft/ResultItem';
 
 const Wrapper = styled.div`
-  display: block;
-  padding: 0 18px 0;
+  width: calc(100% - 36px);
   height: 36px;
-  width: 100%;
+  padding: 0 18px 0;
   float: left;
 `;
 

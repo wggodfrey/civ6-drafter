@@ -10,8 +10,8 @@ const toggCiv = civ => ({
   payload: civ,
 });
 
-const getCivs = () => (dispatch) => {
-  axios.get('/civs')
+const getCivs = ruleset => dispatch => {
+  axios.get('/civs/' + ruleset)
     .then(({ data }) => {
       const civs = data.map(c => ({ ...c, active: true }))
         .sort((a, b) => {
