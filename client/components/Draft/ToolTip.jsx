@@ -124,13 +124,11 @@ class ToolTip extends React.Component {
 
   render() {
     const { posX, posY, content } = this.props;
-    if (this.tooltip)
-      console.log(window.screen.availHeight, posY + this.tooltip.clientHeight/2)
     const verticalOffset = this.tooltip
-                           ? (posY + this.tooltip.clientHeight/2 > window.screen.availHeight - 105
-                              ? window.screen.availHeight - this.tooltip.clientHeight - 105
+                           ? (posY + this.tooltip.clientHeight/2 > window.screen.availHeight - 125
+                              ? window.screen.availHeight - this.tooltip.clientHeight - 125
                               : posY - this.tooltip.clientHeight/2)
-                           : 0
+                           : 0;
 
     const wrapperStyle = {
       top: `${verticalOffset}px`,
